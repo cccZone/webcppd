@@ -35,6 +35,7 @@ make stop
 开发者的工作很简单。只需三步：
 
 * 编写Poco::Net::HTTPRequestHandler的子类例如A，实现void handleRequest(Poco::Net::HTTPServerRequest& request, Poco::Net::HTTPServerResponse& response);
-* 编写 extern "C" 函数，返回 new A；
-* 编译为动态库例如libA.so并把动态库放置在配置的搜索目录中
+* 编写 extern "C" Poco::Net::HTTPRequestHandler* aImpl()函数，返回 new A；
+* 编译为动态库例如libA.so并把动态库放置在配置的搜索目录中,测试访问http://localhost:8888/A/a即可
+
 

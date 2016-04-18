@@ -38,4 +38,5 @@ make stop
 * 编写 extern "C" Poco::Net::HTTPRequestHandler* aImpl()函数，返回 new A；
 * 编译为动态库例如libA.so并把动态库放置在配置的搜索目录中,测试访问http://localhost:8888/A/a即可
 
-
+# 相关文章
+[Poco HTTP 服务器](http://www.webcpp.net/blog/set/6.html)
